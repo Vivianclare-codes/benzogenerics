@@ -1,21 +1,18 @@
-
-import { About } from '@/components/sections/about'
-import { Credibility } from '@/components/sections/credibility'
-import { Footer } from '@/components/sections/footer'
-import { Help } from '@/components/sections/help'
-import { Hero } from '@/components/sections/hero'
-import { Navbar } from '@/components/sections/navbar'
-import { Products } from '@/components/sections/products'
-import { Visit } from '@/components/sections/visit'
-import { Wholesale } from '@/components/sections/wholesale'
-
-
+import { Navbar } from "@/components/sections/navbar";
+import { Hero } from "@/components/sections/hero";
+import { Credibility } from "@/components/sections/credibility";
+import { Help } from "@/components/sections/help";
+import { About } from "@/components/sections/about";
+import { Products } from "@/components/sections/products";
+import { Wholesale } from "@/components/sections/wholesale";
+import { Visit } from "@/components/sections/visit";
+import { Footer } from "@/components/sections/footer";
 
 export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="bg-[#f5f5f5] text-slate-950">
+      <main>
         <Hero />
         <Credibility />
         <Help />
@@ -26,7 +23,7 @@ export default function Page() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
 export const metadata = {
