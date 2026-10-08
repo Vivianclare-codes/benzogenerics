@@ -1,3 +1,4 @@
+
 import Image from 'next/image'
 import BenzoNavbar from '../../components/benzo-navbar'
 
@@ -32,8 +33,7 @@ export default function Page() {
             </h1>
 
             <p className="mt-6 max-w-lg text-base leading-7 text-[#596579] sm:text-lg sm:leading-8">
-              Serving individuals, families and healthcare businesses in Port
-              Harcourt for over 15 years.
+              Serving individuals, families and healthcare businesses in Port Harcourt for over 15 years, with medicines, medical supplies and wholesale healthcare products.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -59,7 +59,7 @@ export default function Page() {
           <div className="flex flex-col">
             <div className="relative aspect-[4/4.4] w-full overflow-hidden bg-[#eaebed] sm:aspect-[4/4.2] lg:aspect-[4/4.35]">
               <Image
-                src="/images/benzo-storefront.svg"
+                src="/images/benzo-storefront.jpg"
                 alt="Benzo Generics Pharmacy storefront in Rumuodara, Port Harcourt"
                 fill
                 priority
