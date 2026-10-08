@@ -83,7 +83,7 @@ export function Navbar() {
 
           {/* Mobile menu */}
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
+            <SheetTrigger>
               <button
                 type="button"
                 aria-label="Open menu"
@@ -107,7 +107,7 @@ export function Navbar() {
                 <ul className="divide-y divide-[#DCE8F1] border-y border-[#DCE8F1]">
                   {LINKS.map((l) => (
                     <li key={l.label}>
-                      <SheetClose asChild>
+                      <SheetClose>
                         <a
                           href={l.href}
                           className="flex min-h-[56px] items-center font-heading text-xl font-medium text-[#10243E] transition-colors duration-150 active:text-[#2F6FAE]"
@@ -121,7 +121,7 @@ export function Navbar() {
               </nav>
 
               <div className="p-6">
-                <SheetClose asChild>
+                <SheetClose>
                   <a
                     href={waLink(WA_MESSAGES.medicine)}
                     target="_blank"
