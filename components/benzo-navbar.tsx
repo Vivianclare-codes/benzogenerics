@@ -20,16 +20,15 @@ export function BenzoNavbar() {
   const closeMenu = () => setIsMenuOpen(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white">
+    <header className="sticky top-0 z-50 border-b border-[#d7dadf] bg-white">
       <nav
         aria-label="Main navigation"
         className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12"
       >
-        {/* Brand */}
         <a
           href="#home"
           onClick={closeMenu}
-          className="group flex shrink-0 items-center text-slate-950"
+          className="flex shrink-0 items-center text-[#0b1b3d]"
           aria-label="Benzo Generics Pharmacy home"
         >
           <span className="flex flex-col leading-none">
@@ -37,32 +36,30 @@ export function BenzoNavbar() {
               Benzo Generics
             </span>
 
-            <span className="mt-1 text-[9px] font-medium uppercase tracking-[0.22em] text-[#0b4ea2]">
+            <span className="mt-1 text-[9px] font-medium uppercase tracking-[0.22em] text-[#1d63b8]">
               Pharmacy
             </span>
           </span>
         </a>
 
-        {/* Desktop Navigation */}
         <div className="hidden items-center gap-9 lg:flex">
           {navigation.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="relative py-2 text-[13px] font-medium text-slate-600 transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[#0b4ea2] after:transition-all after:duration-300 hover:text-[#0b4ea2] hover:after:w-full"
+              className="relative py-2 text-[13px] font-medium text-[#596579] transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[#1d63b8] after:transition-all after:duration-300 hover:text-[#1d63b8] hover:after:w-full"
             >
               {item.label}
             </a>
           ))}
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden items-center gap-7 lg:flex">
+        <div className="hidden items-center lg:flex">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex h-11 items-center gap-3 bg-[#0b4ea2] px-5 text-[13px] font-semibold text-white transition-colors hover:bg-[#083d80] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b4ea2] focus-visible:ring-offset-2"
+            className="group inline-flex h-11 items-center gap-3 bg-[#1d63b8] px-5 text-[13px] font-semibold text-white transition-colors hover:bg-[#315a82] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1d63b8]"
           >
             Request a Medicine
 
@@ -73,7 +70,6 @@ export function BenzoNavbar() {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           type="button"
           aria-expanded={isMenuOpen}
@@ -82,7 +78,7 @@ export function BenzoNavbar() {
             isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'
           }
           onClick={() => setIsMenuOpen((open) => !open)}
-          className="flex h-11 w-11 items-center justify-center border border-slate-200 text-slate-900 transition-colors hover:border-[#0b4ea2] hover:text-[#0b4ea2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b4ea2] focus-visible:ring-offset-2 lg:hidden"
+          className="flex h-11 w-11 items-center justify-center border border-[#d7dadf] text-[#0b1b3d] transition-colors hover:border-[#1d63b8] hover:text-[#1d63b8] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1d63b8] lg:hidden"
         >
           {isMenuOpen ? (
             <X aria-hidden="true" className="h-5 w-5" />
@@ -92,10 +88,9 @@ export function BenzoNavbar() {
         </button>
       </nav>
 
-      {/* Mobile Navigation */}
       <div
         id="mobile-navigation"
-        className={`overflow-hidden border-t border-slate-100 bg-white transition-[max-height,opacity] duration-300 lg:hidden ${
+        className={`overflow-hidden border-t border-[#eaebed] bg-white transition-[max-height,opacity] duration-300 lg:hidden ${
           isMenuOpen
             ? 'max-h-[420px] opacity-100'
             : 'max-h-0 opacity-0'
@@ -110,7 +105,7 @@ export function BenzoNavbar() {
                 href={item.href}
                 onClick={closeMenu}
                 tabIndex={isMenuOpen ? 0 : -1}
-                className="border-b border-slate-100 py-4 text-sm font-medium text-slate-700 transition-colors hover:text-[#0b4ea2]"
+                className="border-b border-[#eaebed] py-4 text-sm font-medium text-[#596579] transition-colors hover:text-[#1d63b8]"
               >
                 {item.label}
               </a>
@@ -122,7 +117,7 @@ export function BenzoNavbar() {
               rel="noopener noreferrer"
               onClick={closeMenu}
               tabIndex={isMenuOpen ? 0 : -1}
-              className="mt-5 inline-flex h-12 items-center justify-between bg-[#0b4ea2] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#083d80] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0b4ea2] focus-visible:ring-offset-2"
+              className="mt-5 inline-flex h-12 items-center justify-between bg-[#1d63b8] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#315a82] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1d63b8]"
             >
               Request a Medicine
 
