@@ -10,14 +10,15 @@ export const SITE = {
 
 export const WA_MESSAGES = {
   medicine:
-    "Hi Benzo Generics, I'd like to ask about a medicine.\nMedicine name:\nQuantity:",
+    "Hi, I came from your website and I want to ask about a medicine.\n\nPlease let me know if it's available.\nMedicine name:\nQuantity:",
   supplies:
-    "Hi Benzo Generics, I'd like to ask about medical supplies.\nSupplies needed:\nQuantity:",
+    "Hi, I came from your website and I want to ask about medical supplies.\n\nSupplies needed:\nQuantity:",
   wholesale:
-    "Hi Benzo Generics, I'd like to make a wholesale enquiry.\nBusiness/organisation:\nProducts needed:\nQuantity:",
+    "Hi, I came from your website and I want to make a wholesale enquiry.\n\nBusiness/organisation:\nProducts needed:\nQuantity:",
   prescription:
-    "Hi Benzo Generics, I have a prescription I'd like to enquire about. Please let me know how I can send it for review.",
-  general: "Hi Benzo Generics, I have a question.",
+    "Hi, I came from your website and I have a prescription I'd like to enquire about.\n\nPlease let me know how I can send it for review.",
+  general:
+    "Hi, I came from your website and I would like to ask a question about your products or services.",
 } as const;
 
 export function waLink(message: string) {

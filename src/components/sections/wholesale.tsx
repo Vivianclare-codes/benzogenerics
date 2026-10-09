@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Check } from "lucide-react";
 import { PhotoPlaceholder } from "@/components/photo-placeholder";
 import { Reveal } from "@/components/reveal";
@@ -10,9 +13,50 @@ const POINTS = [
   "Large orders for businesses and organisations",
 ];
 
+const HEADING_TEXT = "Healthcare supplies at the scale your business needs.";
+
 export function Wholesale() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [typedText, setTypedText] = useState("");
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let index = 0;
+    const timer = window.setInterval(() => {
+      index += 1;
+      setTypedText(HEADING_TEXT.slice(0, index));
+
+      if (index >= HEADING_TEXT.length) {
+        window.clearInterval(timer);
+      }
+    }, 32);
+
+    return () => window.clearInterval(timer);
+  }, [isVisible]);
+
   return (
     <section
+      ref={sectionRef}
       id="wholesale"
       className="scroll-mt-20 bg-[#10243E] py-16 text-white lg:py-24"
     >
@@ -22,7 +66,12 @@ export function Wholesale() {
             Wholesale
           </p>
           <h2 className="mt-3 max-w-2xl font-heading text-[28px] font-semibold leading-[1.15] tracking-tight sm:text-4xl lg:text-[40px]">
-            Healthcare supplies at the scale your business needs.
+            <span className="inline-block min-h-[1.25em]">
+              {typedText}
+              {typedText.length < HEADING_TEXT.length && (
+                <span className="ml-0.5 inline-block h-[0.9em] w-[2px] animate-pulse bg-[#9CC2E8] align-middle" />
+              )}
+            </span>
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-[#C9D6E4] sm:text-lg">
             Benzo Generics supplies medicines and medical supplies to healthcare
