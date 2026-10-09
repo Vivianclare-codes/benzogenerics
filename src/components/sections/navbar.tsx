@@ -22,11 +22,15 @@ const LINKS = [
 
 function Logo() {
   return (
-    <a href="#home" aria-label="Benzo Generics Pharmacy, back to top" className="block leading-none">
-      <span className="block font-heading text-2xl font-semibold tracking-[0.06em] text-[#2F6FAE]">
+    <a
+      href="#home"
+      aria-label="Benzo Generics Pharmacy, back to top"
+      className="block leading-none"
+    >
+      <span className="block font-heading text-[1.7rem] font-black tracking-[0.08em] text-[#10243E] drop-shadow-[0_1px_0_rgba(47,111,174,0.15)]">
         BENZO
       </span>
-      <span className="mt-1 block text-[9px] uppercase tracking-[0.18em] text-[#2F6FAE]">
+      <span className="mt-1.5 block text-[9px] font-semibold uppercase tracking-[0.2em] text-[#2F6FAE]">
         Generics Pharmacy
       </span>
     </a>
@@ -47,8 +51,8 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-[#F5F5F2]/90 backdrop-blur-sm transition-[border-color] duration-200 border-b ${
-        scrolled ? "border-[#DCE8F1]" : "border-transparent"
+      className={`sticky top-0 z-50 border-b bg-[#F5F5F2]/80 backdrop-blur-xl shadow-[0_6px_18px_rgba(16,36,62,0.04)] transition-all duration-200 ${
+        scrolled ? "border-[#D7E4EF] shadow-[0_6px_20px_rgba(16,36,62,0.08)]" : "border-transparent shadow-none"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
@@ -61,7 +65,7 @@ export function Navbar() {
               <li key={l.label}>
                 <a
                   href={l.href}
-                  className="text-sm text-[#10243E] transition-colors duration-150 hover:text-[#2F6FAE] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2F6FAE]"
+                  className="text-sm font-medium tracking-[0.02em] text-[#10243E] transition-colors duration-150 hover:text-[#2F6FAE] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2F6FAE]"
                 >
                   {l.label}
                 </a>
@@ -76,7 +80,7 @@ export function Navbar() {
             href={waLink(WA_MESSAGES.medicine)}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden min-h-[44px] items-center rounded-lg bg-[#2F6FAE] px-5 text-sm font-medium text-white transition-colors duration-150 hover:bg-[#265c92] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2F6FAE] lg:inline-flex"
+            className="hidden min-h-[44px] items-center rounded-lg bg-[#2F6FAE] px-5 text-sm font-semibold text-white shadow-[0_10px_20px_rgba(47,111,174,0.18)] transition-all duration-150 hover:bg-[#265c92] hover:shadow-[0_12px_22px_rgba(47,111,174,0.22)] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2F6FAE] lg:inline-flex"
           >
             Request a Medicine
           </a>
@@ -87,9 +91,9 @@ export function Navbar() {
               <button
                 type="button"
                 aria-label="Open menu"
-                className="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-lg text-[#10243E] transition-colors duration-150 hover:bg-[#E8EDF0] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2F6FAE] lg:hidden"
+                className="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#D7E4EF] bg-white/80 text-[#10243E] shadow-[0_8px_18px_rgba(16,36,62,0.06)] transition-all duration-150 hover:border-[#B9D4E8] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2F6FAE] lg:hidden"
               >
-                <Menu className="h-6 w-6" aria-hidden />
+                <Menu className="h-5 w-5" aria-hidden />
               </button>
             </SheetTrigger>
 
