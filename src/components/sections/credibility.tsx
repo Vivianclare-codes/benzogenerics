@@ -2,7 +2,7 @@ import { MapPin, Phone, ShoppingBag, Users } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 
 const ITEMS = [
-  { title: "15+ years", caption: "Serving Port Harcourt", icon: Users },
+  { title: "20+ years", caption: "Serving Port Harcourt", icon: Users },
   {
     title: "Retail + wholesale",
     caption: "For individuals and healthcare businesses",

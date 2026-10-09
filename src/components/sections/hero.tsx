@@ -30,7 +30,7 @@ export function Hero() {
             style={delay(200)}
           >
             Serving individuals, families and healthcare businesses in Port
-            Harcourt for over 15 years.
+            Harcourt for over 20 years.
           </p>
 
           <div
@@ -77,7 +77,9 @@ export function Hero() {
         <div className="animate-fade-up" style={delay(550)}>
           <PhotoPlaceholder
             label="PHOTO: real storefront exterior of Benzo on Okporo Road"
-            className="aspect-[4/5] w-full lg:aspect-auto lg:h-[540px]"
+            alt="PHOTO: real storefront exterior of Benzo on Okporo Road"
+            src="/image/benzo-exterior.jpg"
+            className="aspect-[4/5] w-full rounded-xl object-cover lg:aspect-auto lg:h-[540px]"
           />
         </div>
       </div>

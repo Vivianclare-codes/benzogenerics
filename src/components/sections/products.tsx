@@ -8,21 +8,25 @@ const CATEGORIES = [
     title: "Medicines",
     text: "Prescription and over-the-counter medicines for individuals and families.",
     photo: "PHOTO: medicine shelves",
+    src: "/image/medicine-shelves.jpg",
   },
   {
     title: "Medical Supplies",
     text: "Syringes, gloves, IV fluids, cotton wool and other healthcare supplies.",
     photo: "PHOTO: syringes, gloves, IV supplies",
+    src: "/image/medical-supplies.jpg",
   },
   {
     title: "Hospital Consumables",
     text: "Essential consumables used by healthcare facilities and professionals.",
     photo: "PHOTO: hospital consumables",
+    src: "/image/wholesale-shelfs.jpg",
   },
   {
     title: "Wholesale Stock",
     text: "Stock in quantity for businesses and organisations.",
     photo: "PHOTO: bulk stock",
+    src: "",
   },
 ];
 
@@ -48,7 +52,9 @@ export function Products() {
                   <div className="overflow-hidden rounded-xl">
                     <PhotoPlaceholder
                       label={c.photo}
-                      className="aspect-[4/3] w-full rounded-none transition-transform duration-300 ease-out group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                      alt={c.photo}
+                      src={c.src}
+                      className="aspect-[4/3] w-full rounded-none object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                     />
                   </div>
                   <h3 className="mt-4 font-heading text-lg font-semibold text-[#10243E]">

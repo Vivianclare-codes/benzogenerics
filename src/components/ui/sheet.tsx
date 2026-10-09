@@ -11,12 +11,20 @@ function Sheet({ ...props }: SheetPrimitive.Root.Props) {
   return <SheetPrimitive.Root data-slot="sheet" {...props} />
 }
 
-function SheetTrigger({ ...props }: SheetPrimitive.Trigger.Props) {
-  return <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props} />
+function SheetTrigger({ children, ...props }: SheetPrimitive.Trigger.Props & { children?: React.ReactNode }) {
+  if (React.isValidElement(children)) {
+    return <SheetPrimitive.Trigger data-slot="sheet-trigger" render={children} {...props} />
+  }
+
+  return <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props}>{children}</SheetPrimitive.Trigger>
 }
 
-function SheetClose({ ...props }: SheetPrimitive.Close.Props) {
-  return <SheetPrimitive.Close data-slot="sheet-close" {...props} />
+function SheetClose({ children, ...props }: SheetPrimitive.Close.Props & { children?: React.ReactNode }) {
+  if (React.isValidElement(children)) {
+    return <SheetPrimitive.Close data-slot="sheet-close" render={children} {...props} />
+  }
+
+  return <SheetPrimitive.Close data-slot="sheet-close" {...props}>{children}</SheetPrimitive.Close>
 }
 
 function SheetPortal({ ...props }: SheetPrimitive.Portal.Props) {

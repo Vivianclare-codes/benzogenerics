@@ -10,7 +10,9 @@ export function About() {
             <div className="relative h-full min-h-[280px] overflow-hidden bg-[#E8EDF0] md:min-h-[420px]">
               <PhotoPlaceholder
                 label="PHOTO: my uncle / the pharmacist / the team working inside the pharmacy"
-                className="h-full w-full rounded-none"
+                alt="PHOTO: my uncle / the pharmacist / the team working inside the pharmacy"
+                src="/image/benzo-team.jpg"
+                className="h-full w-full rounded-none object-cover"
               />
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#10243E]/55 to-transparent" />
               <div className="absolute bottom-4 left-4 rounded-full border border-white/30 bg-[#10243E]/75 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.12em] text-white backdrop-blur-sm">
@@ -30,13 +32,22 @@ export function About() {
               </h2>
 
               <div className="mt-6 space-y-4 text-base leading-relaxed text-[#4A5B70]">
-                <p>[Story: how Benzo started and why.]</p>
-                <p>[Story: how it grew and what it is known for.]</p>
+                <p>
+                  Benzo Generics Pharmacy began as a neighbourhood pharmacy built on
+                  trust, practical care, and a genuine understanding of what families
+                  and healthcare businesses need from a local medicine provider.
+                </p>
+                <p>
+                  Over the years, it has grown into a dependable source of medicines,
+                  medical supplies, and everyday healthcare support across Port Harcourt,
+                  known for warm service, reliable stock, and steady guidance when people
+                  need it most.
+                </p>
               </div>
 
               <div className="mt-7 border-t border-[#DCE8F1] pt-5">
                 <p className="font-heading text-lg font-semibold text-[#10243E]">
-                  15+ years serving Port Harcourt.
+                  20+ years serving Port Harcourt.
                 </p>
               </div>
             </div>

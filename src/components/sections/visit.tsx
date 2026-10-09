@@ -67,7 +67,9 @@ export function Visit() {
           <div className="overflow-hidden rounded-xl">
             <PhotoPlaceholder
               label="PHOTO: storefront / entrance from the road"
-              className="aspect-[4/3] w-full rounded-none"
+              alt="PHOTO: storefront / entrance from the road"
+              src="/image/benzo-exterior.jpg"
+              className="aspect-[4/3] w-full rounded-none object-cover"
             />
           </div>
         </Reveal>

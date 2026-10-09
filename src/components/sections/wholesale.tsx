@@ -35,7 +35,9 @@ export function Wholesale() {
           <div className="overflow-hidden rounded-xl">
             <PhotoPlaceholder
               label="LARGE PHOTO: real bulk stock, cartons, staff handling wholesale orders"
-              className="aspect-[4/3] w-full rounded-none border-[#9CC2E8]/50 bg-[#1B3556] text-[#C9D6E4] lg:aspect-[21/9]"
+              alt="LARGE PHOTO: real bulk stock, cartons, staff handling wholesale orders"
+              src="/image/benzo-wholesale.jpg"
+              className="aspect-[4/3] w-full rounded-none border-[#9CC2E8]/50 bg-[#1B3556] object-cover text-[#C9D6E4] lg:aspect-[21/9]"
             />
           </div>
         </Reveal>
