@@ -26,7 +26,7 @@ const CATEGORIES = [
     title: "Wholesale Stock",
     text: "Stock in quantity for businesses and organisations.",
     photo: "PHOTO: bulk stock",
-    src: "",
+    src: "/image/wholesale.jpg",
   },
 ];
 
